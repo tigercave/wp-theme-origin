@@ -1,0 +1,496 @@
+/*
+Theme Name: cuongnt.local
+Theme URI: http://cuongnt.local/
+Author: Richard Nguyen
+Author URI: http://cuongnt.com/
+Description: Development theme
+Version: 1.0
+Text Domain: cuongnt
+Tags: sample, cuongnt
+*/
+
+@media screen {
+/*--------------------------------------------------------------
+1.0 Reset
+--------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+html {
+	font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+	overflow-y: scroll; /* Keeps page centered in all browsers regardless of content height */
+	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+	-ms-text-size-adjust:     100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+	box-sizing: border-box; /* Apply a natural box layout model to the document; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+}
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: #fff; /* Fallback for when there is no custom background color defined. */
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+	display: block;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+table { /* tables still need 'cellspacing="0"' in the markup */
+	border-collapse: separate;
+	border-spacing: 0;
+}
+
+caption,
+th,
+td {
+	font-weight: normal;
+	text-align: left;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+}
+
+blockquote,
+q {
+	quotes: "" "";
+}
+
+a {
+	text-decoration: none;
+	color: #ce9702;
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover,
+a:active {
+	outline: 0;
+}
+
+a img {
+	border: 0;
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+.clearfix:after, .clearfix:before {
+	display: table;
+	content: "";
+	line-height: 0;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+/*--------------------------------------------------------------
+2.0 Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+	color: #404040;
+	font-family: sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+}
+
+p {
+	margin-bottom: 1.5em;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1.5em;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 1.5rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-size: 15px;
+	font-size: 1.5rem;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+sup,
+sub {
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	bottom: 1ex;
+}
+
+sub {
+	top: .5ex;
+}
+
+small {
+	font-size: 75%;
+}
+
+big {
+	font-size: 125%;
+}
+
+/* ---------------------------------------------
+HEADER
+-------------------------------------------------*/
+
+#page-wrap {margin: 0 auto; width: 1000px;}
+#header {height: 116px; padding: 30px 0 0 10px; background: url('img/header-bg.jpg') no-repeat top right;}
+#header h1 a {
+	display: block; 
+	width: 197px; 
+	height: 63px; 
+	background: url('img/logo.png') no-repeat top left;
+	text-indent: -9999px;
+}
+#top-bar {
+	border-top: 1px dashed #359cc3;
+	border-bottom: 1px dashed #359cc3;
+	pading: 1px 0 0 1px;
+}
+
+#search-box {float: right;}
+
+#menu-page-menu {float: left;}
+#menu-page-menu li {
+	position: relative;
+	float: left;
+}
+
+#menu-page-menu li a {
+	display: block;
+	float: left;
+	padding: 0px 10px;
+	font-size: 16px;
+	line-height: 25px;
+	color:#545454;
+	border-right: 1px solid white;
+	border-bottom: 1px solid white;
+}
+
+#menu-page-menu li a:hover {
+	color: white;
+	background-color: #bcd4da;
+}
+
+#menu-page-menu li ul {
+	position: absolute;
+	top: 100%;
+	width: 13em;
+	display: none;
+	z-index: 10000;
+}
+
+#menu-page-menu li:hover ul {
+	display: block;
+}
+
+#menu-page-menu li ul li a {
+	float: none;
+	font-size: 14px;
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+}
+
+#menu-page-menu li ul li {
+	background-color: #bcd4da;
+	width: 100%;
+}
+
+#menu-page-menu li ul li a:hover {
+	background-color: #d7e7ea;
+	color: #31576a;
+}
+
+#page-info {
+	margin: 25px 0;
+	overflow: hidden;
+}
+
+#featured {float: left;}
+#facebook {float: right;}
+
+/* UNLESS YOU KNOW WHAT YOU'RE DOING, DO NOT CHANGE THE FOLLOWING RULES */
+.easy-accordion h2{margin:0px 0 10px 0;padding:0;font-size:15px;}
+.easy-accordion {display:block;position:relative;overflow:hidden;padding:0;margin:0}
+.easy-accordion dt,.easy-accordion dd{margin:0;padding:0}
+.easy-accordion dt,.easy-accordion dd{position:absolute}
+.easy-accordion dt{
+	margin-bottom:0;
+	margin-left:0;
+	z-index:5;
+	/* Safari */ -webkit-transform: rotate(-90deg); 
+	/* Firefox */ -moz-transform: rotate(-90deg);
+	-moz-transform-origin: 20px 0px;  
+	/* Internet Explorer */ 
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);cursor:pointer;}
+.easy-accordion dd{z-index:1;opacity:0;overflow:hidden}
+.easy-accordion dd.active{opacity:1;}
+.easy-accordion dd.no-more-active{z-index:2;opacity:1}
+.easy-accordion dd.active{z-index:3}
+.easy-accordion dd.plus{z-index:4}
+.easy-accordion .slide-number{position:absolute;bottom:0;left:10px;font-weight:normal;font-size:1.1em;/* Safari */ -webkit-transform: rotate(90deg); /* Firefox */ -moz-transform: rotate(90deg);  /* Internet Explorer */ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);}
+ 
+ 
+/* FEEL FREE TO CUSTOMIZE THE FOLLOWING RULES */
+
+dd p{line-height:120%}
+
+#featured {
+	width:750px;
+	height:245px;
+	background:#fff;
+	border:1px solid #b5c9e8;
+}
+#featured dl{
+	width:750px;
+	height:245px
+}	
+#featured dt{
+	height:46px;
+	line-height:46px;
+	text-align: center;
+	margin: 0;
+	font-size:1.1em;
+	font-weight:bold;
+	letter-spacing:1px;
+	background:#f1f1f1;
+	color:#26526c;
+	display: block;	
+}
+#featured dt.active{
+	cursor:pointer;
+	color:#fff;
+	background: #234e64;
+}
+#featured dt.hover{color:#68889b;}
+#featured dt.active.hover{color:#fff}
+#featured dd {
+	padding: 10px;
+	background: white;
+}
+#featured .slide-number{color:#68889b;left:10px;font-weight:bold}
+#featured .active .slide-number{color:#fff;}
+#featured a {color:#68889b}
+#featured dd img{float:right;}
+#featured h2 {font-size:1.5em;}
+#featured .more{padding-top:10px;display:block}
+
+/* ---------------------------------------------
+MAIN STRUCTURE
+-------------------------------------------------*/
+#content-wrap {	width: 100%;overflow: hidden;}
+#first-sidebar {float: left;width: 147px;}
+#main-content {width: 540px;float: left;}
+#second-sidebar {width: 229px;float: right;}
+
+#menu-category {
+	padding: 5px;
+}
+
+#menu-category li a {
+	color: #666;
+	display: block;
+	padding: 0 0 5px 0;
+	border-bottom: 1px dotted #bcd4da;
+}
+
+#menu-category li a:hover {
+	color: #ce9702;
+}
+
+.widget {
+	padding: 0 0 20px 0;
+}
+
+.widget p {
+	padding: 0 3px;
+}
+
+.widget h4 a {font: bold 12px verdana, sans-serif;}
+.widget h2 {line-height: 38px; text-indent: 15px; color: white;font-size: 16px; background-color: #bcd4da;}
+.date {text-decoration: underline;color: #898989;text-align: right;font-size: 11px;}
+
+#main-content {
+	padding: 0 10px;
+}
+
+#main-content h2 {
+	text-indent: 15px;
+	color: white;
+	line-height: 37px;
+	font-size: 16px; 
+	background: url(img/cat-bg.png) no-repeat top left;
+	border-bottom: 1px solid #bcd4da;
+}
+
+#main-content h2 a {color: white;}
+
+.post {position: relative;}
+.post h3 {margin: 18px 0 0 158px;font-size: 18px; display: block;}
+.post h3 a:hover {text-decoration: underline;}
+.post img {float: left;margin: 0px 15px;}
+.post p {margin-left:158px;}
+.post .meta-data {margin: 15px 0;border-top: 1px solid #bcd4da;border-bottom: 1px solid #bcd4da;padding: 5px;}
+.more-link {position: absolute; bottom: 7px; right: 0;}
+.post-edit-link {float: right;}
+a.more-link:hover {
+	text-decoration: underline;
+}
+.comment-link {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: block;
+	width: 43px;
+	height: 36px;
+	font-weight: bold;
+	color: #ce9702;
+	text-align: center;
+	background: url(img/comment-bubble-rtl.png) no-repeat top left;
+}
+
+/*-------------------
+SECOND SIDEBAR
+----------------------*/
+#second-sidebar {
+
+}
+
+.tabs {height: 33px;border-left: 1px solid #bcd4da;margin-bottom: 1px;}
+.tabs li {
+	float: left; 
+	line-height: 31px; 
+	border: 1px solid #bcd4da;
+	border-left: none;
+}
+.tabs li a {
+	color: white;
+	display: block;
+	padding: 0 13px;
+	background-color: #bcd4da;
+	border: 1px solid white;
+}
+.tabs li:last-child a {padding: 0 15px 0 16px;}
+.tabs li a:hover {background-color: #d7e7ea;}
+.tabs li a.active {background-color: #d7e7ea; color:#31576a;}
+.tabs-container {border: 1px solid #bcd4da; margin-bottom: 20px;}
+.tab-content {padding: 5px 15px;}
+.tab-content ul li {
+	border-bottom: 1px dashed #bcd4da;
+	padding: 7px 0;
+}
+.tab-content ul li:last-child {
+	border: none;
+}
+.tab-content ul li a {color:#666;}
+.tab-content ul li a:hover {color:#ce9702;}
+
+#footer {
+	position: relative;
+	border-top: 4px solid #359cc3;
+	height: 120px;
+	line-height: 120px;
+	background: url(img/footer-bg.jpg) repeat-x top left;
+	clear: both;
+}
+#footer p {text-align: center; color: #848484;text-transform: uppercase; font-size: 14px;}
+
+} /*end @media screen*/
