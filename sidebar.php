@@ -1,37 +1,42 @@
-<?php
-/**
- * The sidebar containing the main widget area.
- *
- * @package origin
- */
-
-
-?>
 <div id="content-wrap">
 	<div id="first-sidebar">
 		<div class="widget">
 			<h2>Site navigation</h2>
-			<ul id="menu-category">
-				<li><a href="#">Web Design</a></li>
-				<li><a href="#">Photoshop</a></li>
-				<li><a href="#">Hosting</a></li>
-				<li><a href="#">Domain name</a></li>
-				<li><a href="#">CSS</a></li>
-			</ul><!-- end ul#menu-category -->
+			<?php    /**
+				* Displays a navigation menu
+				* @param array $args Arguments
+				*/
+				$args = array(
+					'theme_location' => 'sidebar_nav',
+					'container' => ''
+				);
+			
+				wp_nav_menu( $args ); 
+				?>
 		</div><!-- end div.widget -->
 
 		<div class="widget">
 			<h2>RSS Feed</h2>
-			<p class="date">August 20, 2014</p>
-			<h4><a href="#">Lorem ipsum dolor sit amet</a></h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat.</p>
+			<?php if (function_exists('fetch_feed')) {
+				include_once(ABSPATH . WPINC . '/feed.php');
+				$feed = fetch_feed('http://www.izwebz.com/feed/');
+				$limit = $feed->get_item_quantity(2);
+				$items = $feed->get_items(0, $limit);
+				if (!$items) echo "The feed is not available!";
+				else {
+					foreach ($items as $item) { ?>
+					<p class="date"><?php echo $item->get_date('F j, Y'); ?></p>
+					<h4><a href="<?php echo $item->get_permalink(); ?>"><?php echo $item->get_title(); ?></a></h4>
+					<p><?php 
+						$value = substr($item->get_description(), 0, 200);
+						$value = substr($value, 0, strrpos($value, ' '));
+						echo $value;
+					?></p>		
+			
+			<?php }}}?>
 		</div><!-- end div.widget -->
 
-		
-		<?php if (is_active_sidebar( 'sidebar-1' ) ) {
-			dynamic_sidebar( 'sidebar-1' );
+		<?php if (is_active_sidebar( 'left-sidebar' ) ) {
+			dynamic_sidebar( 'left-sidebar' );
 		} ?>
 	</div><!-- end div#first-sidebar -->

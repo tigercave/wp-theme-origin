@@ -243,10 +243,17 @@ HEADER
 #top-bar {
 	border-top: 1px dashed #359cc3;
 	border-bottom: 1px dashed #359cc3;
-	pading: 1px 0 0 1px;
+	padding: 1px 0 0 1px;
 }
 
 #search-box {float: right;}
+
+#search-box input[type=submit] {
+	background: #bcd4da;
+	border: none;
+	color: #666;
+	line-height: 28px;
+}
 
 #menu-page-menu {float: left;}
 #menu-page-menu li {
@@ -259,7 +266,7 @@ HEADER
 	float: left;
 	padding: 0px 10px;
 	font-size: 16px;
-	line-height: 25px;
+	line-height: 30px;
 	color:#545454;
 	border-right: 1px solid white;
 	border-bottom: 1px solid white;
@@ -326,7 +333,18 @@ HEADER
 .easy-accordion dd.no-more-active{z-index:2;opacity:1}
 .easy-accordion dd.active{z-index:3}
 .easy-accordion dd.plus{z-index:4}
-.easy-accordion .slide-number{position:absolute;bottom:0;left:10px;font-weight:normal;font-size:1.1em;/* Safari */ -webkit-transform: rotate(90deg); /* Firefox */ -moz-transform: rotate(90deg);  /* Internet Explorer */ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);}
+.easy-accordion .slide-number{
+	position:absolute;
+	bottom:0;
+	left:10px;
+	font-weight:normal;
+	font-size:1.1em;
+	/* Safari */ 
+	-webkit-transform: rotate(90deg); 
+	/* Firefox */ 
+	-moz-transform: rotate(90deg);  
+	/* Internet Explorer */ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+}
  
  
 /* FEEL FREE TO CUSTOMIZE THE FOLLOWING RULES */
@@ -337,7 +355,7 @@ dd p{line-height:120%}
 	width:750px;
 	height:245px;
 	background:#fff;
-	border:1px solid #b5c9e8;
+	border:1px solid #bcd4da;
 }
 #featured dl{
 	width:750px;
@@ -354,7 +372,9 @@ dd p{line-height:120%}
 	background:#f1f1f1;
 	color:#26526c;
 	display: block;	
+	border-bottom: 1px solid #bcd4da;
 }
+
 #featured dt.active{
 	cursor:pointer;
 	color:#fff;
@@ -381,18 +401,18 @@ MAIN STRUCTURE
 #main-content {width: 540px;float: left;}
 #second-sidebar {width: 229px;float: right;}
 
-#menu-category {
+#menu-category-menu {
 	padding: 5px;
 }
 
-#menu-category li a {
+#menu-category-menu li a {
 	color: #666;
 	display: block;
 	padding: 0 0 5px 0;
 	border-bottom: 1px dotted #bcd4da;
 }
 
-#menu-category li a:hover {
+#menu-category-menu li a:hover {
 	color: #ce9702;
 }
 
@@ -408,6 +428,9 @@ MAIN STRUCTURE
 .widget h2 {line-height: 38px; text-indent: 15px; color: white;font-size: 16px; background-color: #bcd4da;}
 .date {text-decoration: underline;color: #898989;text-align: right;font-size: 11px;}
 
+.widget table {	width:100%;}
+.widget table caption { font-weight: bold; font-size: 14px; color: #bcd4da; text-align: center;}
+.widget table thead {font-size: bold !important; color: green;}
 #main-content {
 	padding: 0 10px;
 }

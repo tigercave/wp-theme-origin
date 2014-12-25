@@ -15,9 +15,6 @@
 		</div><!-- end div#footer -->
 
 		<?php wp_footer(); ?>
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-		<script type="text/javascript" src="<?php echo bloginfo('template_directory') ?>/js/jquery.easyAccordion.js"></script>
-		<script type="text/javascript" src="<?php echo bloginfo('template_directory') ?>/js/script.js"></script>
 
 </body>
 </html>

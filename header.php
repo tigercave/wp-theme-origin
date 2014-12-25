@@ -30,29 +30,14 @@
 				<h1 id="logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			</div><!-- end div#header -->
 			<div id="top-bar" class="clearfix">
-				<ul id="menu-page-menu">
-					<li><a href="#">Home page</a></li>
-					<li><a href="#">About >></a>
-						<ul>
-							<li><a href="#">Sublink-1</a></li>
-							<li><a href="#">Sublink-2</a></li>
-							<li><a href="#">Sublink-3</a></li>
-							<li><a href="#">Sublink-4</a></li>
-							<li><a href="#">Sublink-5</a></li>
-						</ul>
-					</li>
-					<li><a href="#">FAQs >></a>
-						<ul>
-							<li><a href="#">Sublink-1</a></li>
-							<li><a href="#">Sublink-2</a></li>
-							<li><a href="#">Sublink-3</a></li>
-							<li><a href="#">Sublink-4</a></li>
-							<li><a href="#">Sublink-5</a></li>
-						</ul>
-					</li>
-					<li><a href="#">Contact</a></li>
-					<li><a href="#">Forum</a></li>
-				</ul><!-- end ul#menu-page-menu -->
+				<?php    /**
+					* Displays a navigation menu
+					* @param array $args Arguments
+					*/
+					$args = 
+				
+					wp_nav_menu(array('theme_location' => 'main_nav','container' => '')); ?>
+				
 				<div id="search-box">
 					<form id="searchForm" action="" method="get">
 						<input type="text" name="s" id="s" value=""/>
